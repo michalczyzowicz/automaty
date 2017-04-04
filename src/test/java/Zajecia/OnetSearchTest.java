@@ -1,6 +1,6 @@
 package Zajecia;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -25,8 +25,9 @@ public class OnetSearchTest {
 	}
 	
 	@Test
-	public void testSearch(){
+	public void testSearch() throws InterruptedException{
 		OnetSearch onet = PageFactory.initElements(driver, OnetSearch.class);
+		Thread.sleep(3000);
 		onet.setSearchText("nikon");
 		onet.click();
 		assertEquals(onet.getResults().size(), 10);
