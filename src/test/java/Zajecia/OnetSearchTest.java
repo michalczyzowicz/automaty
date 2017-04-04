@@ -19,10 +19,10 @@ public class OnetSearchTest {
 		driver.get("http://www.onet.pl/");
 	}
 	
-	@AfterClass
+	/*@AfterClass
 	public static void tearsDown() {
 		driver.quit();
-	}
+	}*/
 	
 	@Test
 	public void testSearch(){
