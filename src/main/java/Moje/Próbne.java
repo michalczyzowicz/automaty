@@ -11,12 +11,16 @@ public class Próbne {
 
 	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = new FirefoxDriver();
-		driver.get("http://www.barnesandnoble.com/");
-		Thread.sleep(1000);
+		driver.get("http://szukaj.onet.pl/wyniki.html?qt=nikon/");
+		Thread.sleep(3000);
+		driver.getTitle();
+		System.out.println(driver.getTitle());
+		
+		/*Thread.sleep(1000);
 		driver.findElement(By.cssSelector(".close-modal")).click();
 		Thread.sleep(1000);
 		Actions action = new Actions(driver);
-		action.clickAndHold(driver.findElement(By.id("topNav3"))).build().perform();
+		action.clickAndHold(driver.findElement(By.id("topNav3"))).build().perform();*/
 		//Select select = new Select(driver.findElement(By.id("subMenu3")));
 		//select.selectByVisibleText("For Her");
 		//driver.findElement(By.id("topNav3")).click();

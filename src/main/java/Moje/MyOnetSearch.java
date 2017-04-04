@@ -14,6 +14,7 @@ public class MyOnetSearch {
 	@FindBy (css = ".boxResult2 > .box")
 	private List<WebElement> results;
 	
+	
 	public void setSearchText (String text) {
 		this.searchText.sendKeys(text);
 	}
@@ -22,8 +23,9 @@ public class MyOnetSearch {
 		button.click();
 	}
 	
-	public List<WebElement> getTitle() {
-		return results;
+	public List<String> getTitle()
+	{	
+		return getTitle();
 	}
 	
 	public List<WebElement> getResults() {
