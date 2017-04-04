@@ -13,7 +13,12 @@ public class MyOnetSearch {
 	private WebElement button;
 	@FindBy (css = ".boxResult2 > .box")
 	private List<WebElement> results;
+	@FindBy (css = ".switch")
+	private List<WebElement> results2;
 	
+	public List<WebElement> getLogo() {
+		return results2;
+	}
 	
 	public void setSearchText (String text) {
 		this.searchText.sendKeys(text);

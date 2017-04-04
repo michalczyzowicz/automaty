@@ -25,11 +25,10 @@ public class MyOnetSearchTest {
 	@Test
 	public void TestTitle() {
 		MyOnetSearch onetSearch = PageFactory.initElements(driver, MyOnetSearch.class);
-		onetSearch.setSearchText("nikon");
+		assertTrue(onetSearch.getLogo(), isDisplayed));
+		/*onetSearch.setSearchText("nikon");
 		onetSearch.click();
-		assertTrue(onetSearch.getTitle(), true);
-		System.out.println(onetSearch.getTitle());
-		assertEquals(onetSearch.getResults().size(), 10);
+		assertEquals(onetSearch.getResults().size(), 10);*/
 		
 	}
 	

@@ -1,6 +1,6 @@
 package Zajecia;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -31,6 +31,7 @@ public class OnetSearchTest {
 		onet.setSearchText("nikon");
 		onet.click();
 		assertEquals(onet.getResults().size(), 10);
+		
 	}
 	
 	
