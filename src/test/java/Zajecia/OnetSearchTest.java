@@ -24,13 +24,13 @@ public class OnetSearchTest {
 		driver.quit();
 	}
 	
-	@Test
+	/*@Test
 	public void testSearch(){
 		OnetSearch onet = PageFactory.initElements(driver, OnetSearch.class);
 		onet.setSearchText("nikon");
 		onet.click();
 		assertEquals(onet.getResults().size(), 10);
-	}
+	}*/
 	
 	
 	
