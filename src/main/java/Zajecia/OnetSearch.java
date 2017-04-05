@@ -7,8 +7,8 @@ import org.openqa.selenium.support.FindBy;
 
 public class OnetSearch {
 
-	@FindBy (id = "searchQuery")
-	private WebElement searchText;
+	/*@FindBy (id = "searchQuery")
+	private WebElement searchText;*/
 	@FindBy (id = "searchSubmit")
 	private WebElement button;
 	@FindBy (css = ".boxResult2 > .box")
