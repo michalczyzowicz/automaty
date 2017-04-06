@@ -33,7 +33,7 @@ public class LoginTests {
 	assertTrue(loginComponent.getErrors().contains("Pole wymagane"));
 	loginComponent.setEmail("zza");
 	loginComponent.submit();
-	assertTrue(loginComponent.getErrors().contains("Nieprawid≈Çowy format adresu e-mail. Wprowad≈∫ adres ponownie."));
+	assertTrue(loginComponent.getErrors().contains("Nieprawid≥owy format adresu e-mail. Wprowadü adres ponownie."));
 	}
 
 	@Test
@@ -43,7 +43,7 @@ public class LoginTests {
 	loginComponent.setEmail("admin@tc2014.pl");
 	loginComponent.setPassword("12");
 	loginComponent.submit();
-	assertTrue(loginComponent.getErrors().contains("Adres e-mail i/lub has≈Ço sƒÖ niepoprawne."));
+	assertTrue(loginComponent.getErrors().contains("Adres e-mail i/lub has≥o sπ niepoprawne."));
 	driver.navigate().refresh();
 	driver.switchTo().alert().dismiss();//accept();
 	}
