@@ -10,7 +10,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+
 public class RuchyMyszka {
+	
+	
 
 	public static void main(String[] args) throws AWTException, InterruptedException {
 		Robot r = new Robot();
@@ -23,7 +26,12 @@ public class RuchyMyszka {
 		r.mouseMove(370, 422);
 		r.mousePress(InputEvent.BUTTON1_MASK);
 		r.mouseRelease(InputEvent.BUTTON1_MASK);
+		
 
 	}
+	
+	public static boolean isTextInSourceCode(WebDriver driver, String searchText) {
+		return driver.getPageSource().contains(searchText);
+		}
 
 }
