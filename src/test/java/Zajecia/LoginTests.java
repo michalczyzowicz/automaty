@@ -55,5 +55,6 @@ public class LoginTests {
 	loginComponent.submit();
 	assertTrue(loginComponent.getAllow().isDisplayed());
 	}
+	
 }
 
