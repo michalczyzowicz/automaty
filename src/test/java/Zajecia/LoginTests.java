@@ -13,6 +13,8 @@ public class LoginTests {
 
 	public static WebDriver driver;
 
+	//Jak zamiast BeforeClass napiszemy samo Before to do kazdego testu bedzie otwierana nowa sesja przegladarki.
+	//BeforeClass sposowduje ze zostanie otwarta jedna sesja i wszystkie testy beda wykonywane na niej.
 	@Before
 	public void setUp() {
 	driver = new FirefoxDriver();
