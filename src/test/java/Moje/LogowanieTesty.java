@@ -19,12 +19,12 @@ public class LogowanieTesty {
 		driver.get("http://demo.mrbuggy2.testarena.pl/zaloguj");
 	}
 	
-	/*@After
+	@After
 	public void tearsDown() {
 		driver.quit();
-	}*/
+	}
 	
-	/*@Test
+	@Test
 	public void walidacjaPol() {
 		KomponentLogowania logowanie = PageFactory.initElements(driver, KomponentLogowania.class);
 		logowanie.submit();
@@ -45,7 +45,7 @@ public class LogowanieTesty {
 		assertTrue(logowanie.getErrors().contains("Adres e-mail i/lub hasło są niepoprawne."));
 		driver.navigate().refresh();
 		driver.switchTo().alert().dismiss();
-	}*/
+	}
 	
 	@Test
 	public void udaneZalogowanie() throws InterruptedException {
