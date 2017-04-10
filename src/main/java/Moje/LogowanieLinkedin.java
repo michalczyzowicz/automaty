@@ -17,8 +17,12 @@ public class LogowanieLinkedin {
 	private WebElement submit;
 	@FindBy (className = "error")
 	private List<WebElement> error;
-	@FindBy (id = "ember2503")
+	@FindBy (id = "mynetwork-tab-icon")
 	private WebElement logo;
+	@FindBy ())
+	private WebElement searchPeople;
+	@FindBy (id = "nav-search-controls-wormhole")
+	private WebElement submit2;
 	
 	
 	public void setEmail(String email) {
@@ -48,6 +52,14 @@ public class LogowanieLinkedin {
 	
 	public WebElement allow(){
 		return logo;
+	}
+	
+	public void setPeople(String people) {
+		this.searchPeople.sendKeys(people);
+	}
+	
+	public void submit2() {
+		submit2.click();
 	}
 	
 	

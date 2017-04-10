@@ -3,7 +3,9 @@ package Moje;
 import static org.junit.Assert.*;
 
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -11,20 +13,20 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LinkedinLogTest {
 
-	private WebDriver driver;
+	private static WebDriver driver;
 	
-	@Before
-	public void setUp() {
+	@BeforeClass
+	public static void setUp() {
 		driver = new FirefoxDriver();
 		driver.get("https://pl.linkedin.com/");
 	}
 	
-	@After
+	/*@AfterClass
 	public void tearsDown() {
 		driver.quit();
-	}
+	}*/
 	
-	@Test
+	/*@Test
 	public void test01(){
 		LogowanieLinkedin logowanielinkedin = PageFactory.initElements(driver, LogowanieLinkedin.class);
 		logowanielinkedin.setEmail("zaazaazaa");
@@ -40,15 +42,23 @@ public class LinkedinLogTest {
 		logowanielinkedin.setPassword("jashdjkah");
 		logowanielinkedin.submit();
 		assertTrue(logowanielinkedin.getErrors().contains("Nieprawidłowe hasło. Spróbuj ponownie lub poproś o nowe."));
-	}
+	}*/
 	
 	@Test
 	public void test03(){
 		LogowanieLinkedin logowanielinkedin = PageFactory.initElements(driver, LogowanieLinkedin.class);
 		logowanielinkedin.setEmail("michalczyzowicz@gmail.com");
-		logowanielinkedin.setPassword("*********");
+		logowanielinkedin.setPassword("Marley87");
 		logowanielinkedin.submit();
 		assertTrue(logowanielinkedin.allow().isDisplayed());
+	}
+	
+	@Test
+	public void test04() {
+		LogowanieLinkedin logowanielinkedin = PageFactory.initElements(driver, LogowanieLinkedin.class);
+		logowanielinkedin.setPeople("Marta Czyżowicz");
+		logowanielinkedin.submit2();
+		
 	}
 	
 	
