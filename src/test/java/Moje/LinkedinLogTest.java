@@ -56,7 +56,7 @@ public class LinkedinLogTest {
 	@Test
 	public void test04() {
 		LogowanieLinkedin logowanielinkedin = PageFactory.initElements(driver, LogowanieLinkedin.class);
-		logowanielinkedin.setPeople("Marta Czy≈ºowicz");
+		logowanielinkedin.setPeople("Marta Czyøowicz");
 		logowanielinkedin.submit2();
 		
 	}

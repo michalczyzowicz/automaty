@@ -19,7 +19,7 @@ public class LogowanieLinkedin {
 	private List<WebElement> error;
 	@FindBy (id = "mynetwork-tab-icon")
 	private WebElement logo;
-	@FindBy ())
+	@FindBy (className = "type-ahead-input")
 	private WebElement searchPeople;
 	@FindBy (id = "nav-search-controls-wormhole")
 	private WebElement submit2;
