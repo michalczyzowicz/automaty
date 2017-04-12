@@ -48,7 +48,7 @@ public class LinkedinLogTest {
 	public void test03(){
 		LogowanieLinkedin logowanielinkedin = PageFactory.initElements(driver, LogowanieLinkedin.class);
 		logowanielinkedin.setEmail("michalczyzowicz@gmail.com");
-		logowanielinkedin.setPassword("Marley87");
+		logowanielinkedin.setPassword("*********");
 		logowanielinkedin.submit();
 		assertTrue(logowanielinkedin.allow().isDisplayed());
 	}
