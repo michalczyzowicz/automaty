@@ -44,23 +44,28 @@ public class LinkedinLogTest {
 		assertTrue(logowanielinkedin.getErrors().contains("Nieprawidłowe hasło. Spróbuj ponownie lub poproś o nowe."));
 	}*/
 	
-	@Test
+	/*@Test
 	public void test03(){
 		LogowanieLinkedin logowanielinkedin = PageFactory.initElements(driver, LogowanieLinkedin.class);
 		logowanielinkedin.setEmail("michalczyzowicz@gmail.com");
-		logowanielinkedin.setPassword("*********");
+		logowanielinkedin.setPassword("Marley87!0");
 		logowanielinkedin.submit();
 		assertTrue(logowanielinkedin.allow().isDisplayed());
-	}
+	}*/
 	
 	@Test
 	public void test04() {
 		LogowanieLinkedin logowanielinkedin = PageFactory.initElements(driver, LogowanieLinkedin.class);
-		logowanielinkedin.setPeople("Marta Czyżowicz");
+		logowanielinkedin.setEmail("michalczyzowicz@gmail.com");
+		logowanielinkedin.setPassword("**************");
+		logowanielinkedin.submit();
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='ember-text-field ember-view']")));
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='ember-text-field ember-view']")));
+		logowanielinkedin.setPeople("Marta Czy�owicz");
 		logowanielinkedin.submit2();
-		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='search-result__result-link ember-view']")));
+		//assertTrue(logowanielinkedin.people().isDisplayed());
+		logowanielinkedin.clickPeople();
 	}
 	
 		

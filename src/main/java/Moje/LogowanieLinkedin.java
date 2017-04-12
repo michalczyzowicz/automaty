@@ -21,6 +21,10 @@ public class LogowanieLinkedin {
 	private WebElement logo;
 	@FindBy (css = ".ember-text-field")
 	private WebElement setPeople;
+	@FindBy (id = "nav-search-controls-wormhole")
+	private WebElement search;
+	@FindBy (xpath = "//*[@class='search-result__result-link ember-view']")
+	private WebElement people;
 	
 	
 	
@@ -58,9 +62,15 @@ public class LogowanieLinkedin {
 	}
 	
 	public void submit2() {
-		setPeople.click();
+		search.click();
 		
 	}
 	
+	public WebElement people() {
+		return people;
+	}
 	
+	public void clickPeople() {
+		people.click();
+	}
 }
