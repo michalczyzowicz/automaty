@@ -25,6 +25,10 @@ public class LogowanieLinkedin {
 	private WebElement search;
 	@FindBy (xpath = "//*[@class='search-result__result-link ember-view']")
 	private WebElement people;
+	@FindBy (xpath = "//*[@class='message primary ember-view']")
+	private WebElement message;
+	@FindBy (xpath = "//*[@class='ember-text-area msg-messaging-form__message msg-messaging-form__message--chat ember-view']")
+	private WebElement setMessage;
 	
 	
 	
@@ -72,5 +76,17 @@ public class LogowanieLinkedin {
 	
 	public void clickPeople() {
 		people.click();
+	}
+	
+	public void message() {
+		message.click();
+	}
+	
+	public void setMessage(String message) {
+		this.setMessage.sendKeys(message);
+	}
+	
+	public void submit3() {
+		setMessage.submit();
 	}
 }

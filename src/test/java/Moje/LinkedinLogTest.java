@@ -2,6 +2,16 @@ package Moje;
 
 import static org.junit.Assert.assertTrue;
 
+import java.awt.AWTException;
+import java.awt.Rectangle;
+import java.awt.Robot;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -21,10 +31,14 @@ public class LinkedinLogTest {
 		driver.get("https://pl.linkedin.com/");
 	}
 	
-	/*@After
-	public void tearsDown() {
+	@AfterClass
+	public static void tearsDown() throws AWTException, IOException {
+		Robot r = new Robot();
+		BufferedImage img = r.createScreenCapture(new Rectangle(0, 0, 1050, 840));
+		File path = new File ("D://Testowanie//screen.jpg");
+		ImageIO.write(img, "JPG", path);
 		driver.quit();
-	}*/
+	}
 	
 	/*@Test
 	public void test01(){
@@ -54,10 +68,10 @@ public class LinkedinLogTest {
 	}*/
 	
 	@Test
-	public void test04() {
+	public void test04() throws InterruptedException {
 		LogowanieLinkedin logowanielinkedin = PageFactory.initElements(driver, LogowanieLinkedin.class);
 		logowanielinkedin.setEmail("michalczyzowicz@gmail.com");
-		logowanielinkedin.setPassword("**************");
+		logowanielinkedin.setPassword("***********");
 		logowanielinkedin.submit();
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='ember-text-field ember-view']")));
@@ -66,6 +80,12 @@ public class LinkedinLogTest {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='search-result__result-link ember-view']")));
 		//assertTrue(logowanielinkedin.people().isDisplayed());
 		logowanielinkedin.clickPeople();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='message primary ember-view']")));
+		logowanielinkedin.message();
+		logowanielinkedin.setMessage("Przyk³adowy text");
+		logowanielinkedin.submit3();
+		Thread.sleep(2000);
+		
 	}
 	
 		
