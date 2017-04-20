@@ -13,8 +13,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import Moje.BookingSearch;
-
 public class BookingSearchTest {
 	private static WebDriver driver;
 

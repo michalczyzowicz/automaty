@@ -1,4 +1,4 @@
-package Moje;
+package Zajecia;
 
 import java.util.List;
 
