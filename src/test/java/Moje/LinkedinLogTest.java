@@ -75,16 +75,16 @@ public class LinkedinLogTest {
 		logowanielinkedin.submit();
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='ember-text-field ember-view']")));
-		logowanielinkedin.setPeople("Marta Czy¿owicz");
+		logowanielinkedin.setPeople("Marta CzyÅ¼owicz");
 		logowanielinkedin.submit2();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='search-result__result-link ember-view']")));
 		//assertTrue(logowanielinkedin.people().isDisplayed());
 		logowanielinkedin.clickPeople();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='message primary ember-view']")));
 		logowanielinkedin.message();
-		logowanielinkedin.setMessage("Przyk³adowy text");
+		logowanielinkedin.setMessage("Przykï¿½adowy text");
 		logowanielinkedin.submit3();
-		Thread.sleep(2000);
+		
 		
 	}
 	
