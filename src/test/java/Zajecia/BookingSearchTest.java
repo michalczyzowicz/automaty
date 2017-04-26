@@ -1,22 +1,30 @@
 package Zajecia;
 
 import java.util.List;
-import java.util.Set;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BookingSearchTest {
-	private static WebDriver driver;
+	
+	private WebDriver driver;
+	
+	@Before
+	public void setUp(){
+		driver = new FirefoxDriver();
+		driver.get("https://booking.com/");
+	}
+	
+	
 
-	@Test
+	/*@Test
 	public void search() {
 		BookingSearch search = PageFactory.initElements(driver, BookingSearch.class);
 		search.setTextInSearch("Warszawa");
@@ -25,9 +33,9 @@ public class BookingSearchTest {
 		List<WebElement> ulLi = driver.findElements(By.xpath("//ul/li/b"));
 		// search.getList().get(3).submit();
 		ulLi.get(3).submit();
-	}
+	}*/
 
-	@Test
+	/*@Test
 	public void windowsHandle() throws Exception {
 		List<WebElement> button = driver.findElements(By.cssSelector(".index-nav_menu-item-link"));
 		button.get(0).click();
@@ -42,9 +50,9 @@ public class BookingSearchTest {
 		driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL + "\t");
 		driver.switchTo().defaultContent();
 		driver.switchTo().window((String) set.toArray()[1]);
-	}
+	}*/
 
-	@Test
+	/*@Test
 	public void submitForm() {
 		BookingSearch search = PageFactory.initElements(driver, BookingSearch.class);
 		search.setTextInSearch("Warszawa");
@@ -54,14 +62,14 @@ public class BookingSearchTest {
 		List<WebElement> columns = calendar.get(0).findElements(By.tagName("tr"));
 		List<WebElement> today = calendar.get(0).findElements(By.xpath("//td[@class = 'c2-day c2-day-s-today']"));
 		today.get(0).click();
-	}
+	}*/
 
-	@Test
+	/*@Test
 	public void welcomePopup() {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		WebElement element = driver.findElement(By.className("header-signin-prompt__close"));
 		element.click();
-	}
+	}*/
 
 	@Test
 	public void currency() {
