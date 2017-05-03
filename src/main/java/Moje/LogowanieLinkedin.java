@@ -89,4 +89,5 @@ public class LogowanieLinkedin {
 	public void submit3() {
 		setMessage.submit();
 	}
+	
 }

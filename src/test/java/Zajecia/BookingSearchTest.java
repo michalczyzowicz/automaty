@@ -1,16 +1,16 @@
 package Zajecia;
 
 import java.util.List;
+import java.util.Set;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.interactions.Actions;
 
 public class BookingSearchTest {
 	
@@ -35,7 +35,7 @@ public class BookingSearchTest {
 		ulLi.get(3).submit();
 	}*/
 
-	/*@Test
+	@Test
 	public void windowsHandle() throws Exception {
 		List<WebElement> button = driver.findElements(By.cssSelector(".index-nav_menu-item-link"));
 		button.get(0).click();
@@ -50,7 +50,7 @@ public class BookingSearchTest {
 		driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL + "\t");
 		driver.switchTo().defaultContent();
 		driver.switchTo().window((String) set.toArray()[1]);
-	}*/
+	}
 
 	/*@Test
 	public void submitForm() {
@@ -71,7 +71,7 @@ public class BookingSearchTest {
 		element.click();
 	}*/
 
-	@Test
+	/*@Test
 	public void currency() {
 		WebElement currencyMain = driver.findElement(By.className("uc_currency"));
 		currencyMain.click();
@@ -84,6 +84,6 @@ public class BookingSearchTest {
 			if (e.getText().equals("TWD"))
 				e.click();
 		}
-	}
+	}*/
 
 }

@@ -20,6 +20,7 @@ private WebDriver driver;
 	}
 	@Test
 	public void search(){
+		//najpierw musimy wejsc do "ramki" aby mozna bylo wyszukiwac w niej elementy, nastepnie robimy PageFactory
 		driver.switchTo().frame("BEHold");
 		PolskiBus search = PageFactory.initElements(driver, PolskiBus.class);
 		search.setPeople("4");

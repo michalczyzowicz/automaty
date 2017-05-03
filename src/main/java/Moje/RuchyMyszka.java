@@ -23,15 +23,15 @@ public class RuchyMyszka {
 		driver.findElement(By.id("ss")).sendKeys("Barcelona");
 		driver.findElement(By.className("sb-searchbox__input sb-date-field__field  -empty")).click();
 		//driver.findElement(By.xpath("//*[@id='current_account']")).click();
-		r.mouseMove(370, 422);
+		r.mouseMove(370, 522);
 		r.mousePress(InputEvent.BUTTON1_MASK);
 		r.mouseRelease(InputEvent.BUTTON1_MASK);
 		
 
 	}
 	
-	public static boolean isTextInSourceCode(WebDriver driver, String searchText) {
-		return driver.getPageSource().contains(searchText);
-		}
+//	public static boolean isTextInSourceCode(WebDriver driver, String searchText) {
+//		return driver.getPageSource().contains(searchText);
+//		}
 
 }
