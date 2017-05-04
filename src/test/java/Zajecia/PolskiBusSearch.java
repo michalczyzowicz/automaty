@@ -26,8 +26,11 @@ private WebDriver driver;
 		search.setPeople("4");
 		search.click();
 		WebDriverWait wait = new WebDriverWait(driver, 15);
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@id='ui-id-1']/li/div[@class='ui-menu-item-wrapper']")));
-		search.getCityFrom().get(5).click();
+		//wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@id='ui-id-1']/li")));
+		//driver.findElements(By.xpath("//ul[@id='ui-id-1']/li[@class='ui-menu-item']")).get(3).getText();
+		search.getCityFrom().get(1).click();
+		search.click2();
+		search.getCityTo().get(3).click();
 	}
 	
 	/*@Test
