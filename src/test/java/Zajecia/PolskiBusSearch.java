@@ -31,6 +31,7 @@ private WebDriver driver;
 		search.getCityFrom().get(1).click();
 		search.click2();
 		search.getCityTo().get(3).click();
+		
 	}
 	
 	/*@Test

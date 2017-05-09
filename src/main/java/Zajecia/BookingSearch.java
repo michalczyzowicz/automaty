@@ -10,6 +10,7 @@ public class BookingSearch {
 	private WebElement search;
 	@FindBy(xpath = "//ul/li/b")
 	private List<WebElement> autocompleteItems;
+	
 
 	public WebElement getSearch() {
 		return search;
@@ -26,5 +27,6 @@ public class BookingSearch {
 	public List<WebElement> getList() {
 		return autocompleteItems;
 	}
-
+	
+	
 }

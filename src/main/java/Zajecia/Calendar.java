@@ -1,5 +1,7 @@
 package Zajecia;
 
+//klasa do wykorzystania przy kalendarzach na stronach www z rezerwacjami biletow, hoteli itp
+
 import java.util.HashMap;
 import java.util.List;
 
@@ -9,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class Calendar {
+	//do Booking.com
 	@FindBy(className = "c2-month-header-monthname")
 	private List<WebElement> month;
 
@@ -26,5 +29,27 @@ public class Calendar {
 			}
 		}
 		return daysWithMonth;
+		
 	}
+	
+	//do PolskiBus.com
+	/*@FindBy(className = "ui-datepicker-title")
+	private List<WebElement> month;
+
+	private HashMap<String, List<WebElement>> daysWithMonth = new HashMap();
+
+	public List<WebElement> getMonth() {
+		return month;
+	}
+
+	public HashMap<String, List<WebElement>> getDaysWithMonth() {
+		for (WebElement m : month) {
+			if (StringUtils.isNotEmpty(m.getText())) {
+				WebElement days = m.findElement(By.xpath("../../.."));
+				daysWithMonth.put(m.getText(), days.findElements(By.className("ui-state-default")));
+			}
+		}
+		return daysWithMonth;
+		
+	}*/
 }
