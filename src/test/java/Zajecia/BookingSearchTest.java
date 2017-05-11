@@ -60,13 +60,21 @@ public class BookingSearchTest {
 	  @Test 
 	  public void submitForm() { BookingSearch search =
 	  PageFactory.initElements(driver, BookingSearch.class);
-	  search.setTextInSearch("Warszawa"); List<WebElement> elements =
-	  driver.findElements(By.className("sb-date-field__display"));
-	  elements.get(0).click();
-	 
+	  search.setTextInSearch("Warszawa"); 
+	  WebDriverWait wait = new WebDriverWait(driver, 15);
+	  wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul/li/b"))); 
+	  List<WebElement> ulLi =  driver.findElements(By.xpath("//ul/li/b"));
+	  ulLi.get(3).click();
+	  List<WebElement> checkin = driver.findElements(By.cssSelector(".sb-searchbox__row > .js--sb-dates > .sb-dates__grid > .--checkin-field"));
+	  	 
 	  Calendar calen = PageFactory.initElements(driver, Calendar.class);
 	  calen.getDaysWithMonth().get("Czerwiec 2017").get(24).click();
+	  
+	  driver.findElement(By.cssSelector(".sb-searchbox__row > .js--sb-dates > .sb-dates__grid > .--checkout-field")).click();
 	 
+	  Calendar calen2 = PageFactory.initElements(driver, Calendar.class);
+	  calen.getDaysWithMonth().get("Czerwiec 2017").get(29).click();
+	  
 
 	/*
 	 * List<WebElement> calendar =

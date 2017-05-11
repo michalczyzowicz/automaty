@@ -25,7 +25,7 @@ public class FunkcjeWybierajace {
 		// po widocznym tekscie
 		 select.selectByVisibleText("Selection Item 1");
 
-		// metoda getFirstSelectedOptions() zwraca wszystkie wybrane opcje;
+		// metoda getAllSelectedOptions() zwraca wszystkie wybrane opcje;
 		
 		  select.selectByIndex(2); List<WebElement> selectedOptions =
 		  select.getAllSelectedOptions(); for (WebElement b : selectedOptions)

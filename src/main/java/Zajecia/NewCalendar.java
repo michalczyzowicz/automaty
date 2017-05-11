@@ -48,4 +48,14 @@ public class NewCalendar {
 	private boolean isNextClickable() {
 		return !next.getAttribute("class").contains("disabled");
 	}
+	
+	
+	//do sprawdzenia asercji czy element jest klikalny
+	public boolean clickNext2() {
+		if (isNextClickable()){
+			next.click();
+			return true;
+		}
+			return false;
+	}
 }

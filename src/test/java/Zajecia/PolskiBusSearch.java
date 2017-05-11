@@ -28,9 +28,18 @@ private WebDriver driver;
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 		//wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@id='ui-id-1']/li")));
 		//driver.findElements(By.xpath("//ul[@id='ui-id-1']/li[@class='ui-menu-item']")).get(3).getText();
-		search.getCityFrom().get(1).click();
+		search.getCityFrom().get(0).click();
 		search.click2();
-		search.getCityTo().get(3).click();
+		search.getCityTo().get(0).click();
+		
+		NewCalendar calendar = PageFactory.initElements(driver, NewCalendar.class);
+		driver.findElement(By.id("datePickerOut")).click();
+		calendar.clickNext();
+		calendar.clickDay("15");
+		driver.findElement(By.id("datePickerRet")).click();
+		calendar.clickDay("25");
+		assertTrue
+		
 		
 	}
 	
