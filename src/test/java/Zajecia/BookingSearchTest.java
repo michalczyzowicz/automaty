@@ -56,17 +56,17 @@ public class BookingSearchTest {
 	 * set.toArray()[1]); }
 	 */
 
-	/*
-	 * @Test 
-	 * public void submitForm() { BookingSearch search =
-	 * PageFactory.initElements(driver, BookingSearch.class);
-	 * search.setTextInSearch("Warszawa"); List<WebElement> elements =
-	 * driver.findElements(By.className("sb-date-field__display"));
-	 * elements.get(0).click();
-	 * 
-	 * Calendar calen = PageFactory.initElements(driver, Calendar.class);
-	 * calen.getDaysWithMonth().get("Czerwiec 2017").get(24).click();
-	 */
+	
+	  @Test 
+	  public void submitForm() { BookingSearch search =
+	  PageFactory.initElements(driver, BookingSearch.class);
+	  search.setTextInSearch("Warszawa"); List<WebElement> elements =
+	  driver.findElements(By.className("sb-date-field__display"));
+	  elements.get(0).click();
+	 
+	  Calendar calen = PageFactory.initElements(driver, Calendar.class);
+	  calen.getDaysWithMonth().get("Czerwiec 2017").get(24).click();
+	 
 
 	/*
 	 * List<WebElement> calendar =
@@ -85,7 +85,7 @@ public class BookingSearchTest {
 	 * element.click(); }
 	 */
 
-	@Test
+	/*@Test
 	public void currency() {
 		WebElement currencyMain = driver.findElement(By.className("uc_currency"));
 		currencyMain.click();
@@ -95,7 +95,9 @@ public class BookingSearchTest {
 		for (WebElement e : currencyPopup) {
 			if (e.getText().equals("HUF"))
 				e.click();
-		}
+		}*/
 		
 	}
 }
+	  
+	  

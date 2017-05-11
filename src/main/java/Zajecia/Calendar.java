@@ -32,24 +32,5 @@ public class Calendar {
 		
 	}
 	
-	//do PolskiBus.com
-	/*@FindBy(className = "ui-datepicker-title")
-	private List<WebElement> month;
-
-	private HashMap<String, List<WebElement>> daysWithMonth = new HashMap();
-
-	public List<WebElement> getMonth() {
-		return month;
-	}
-
-	public HashMap<String, List<WebElement>> getDaysWithMonth() {
-		for (WebElement m : month) {
-			if (StringUtils.isNotEmpty(m.getText())) {
-				WebElement days = m.findElement(By.xpath("../../.."));
-				daysWithMonth.put(m.getText(), days.findElements(By.className("ui-state-default")));
-			}
-		}
-		return daysWithMonth;
-		
-	}*/
+	
 }

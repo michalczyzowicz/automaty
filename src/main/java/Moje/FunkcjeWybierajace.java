@@ -16,27 +16,26 @@ public class FunkcjeWybierajace {
 		Thread.sleep(3000);
 		Select select = new Select(driver.findElement(By.name("multipleselect[]")));
 		// zaznaczanie po numerze indexu
-		// select.selectByIndex(2);
-		// select.selectByIndex(0);
+		 select.selectByIndex(2);
+		 select.selectByIndex(0);
 
 		// zaznaczanie po value
-		// select.selectByValue("ms1");
+		 select.selectByValue("ms1");
 
 		// po widocznym tekscie
-		// select.selectByVisibleText("Selection Item 1");
+		 select.selectByVisibleText("Selection Item 1");
 
 		// metoda getFirstSelectedOptions() zwraca wszystkie wybrane opcje;
-		/*
-		 * select.selectByIndex(2); List<WebElement> selectedOptions =
-		 * select.getAllSelectedOptions(); for (WebElement b : selectedOptions)
-		 * { System.out.println(b.getText()); }
-		 */
+		
+		  select.selectByIndex(2); List<WebElement> selectedOptions =
+		  select.getAllSelectedOptions(); for (WebElement b : selectedOptions)
+		  { System.out.println(b.getText()); }
+		 
 
 		// metoda getOptions() zwraca wszystkie dane z listy opsji
-		/*
-		 * for (WebElement b : select.getOptions()) {
-		 * System.out.println(b.getText()); }
-		 */
+		  for (WebElement b : select.getOptions()) {
+		  System.out.println(b.getText()); }
+		 
 
 		// metoda isMultiple() sprawdza wsparcie dla wielokrotnego wyboru
 		if (select.isMultiple()) {
@@ -46,23 +45,22 @@ public class FunkcjeWybierajace {
 			System.out.println("Nie wspiera wielokrotnego wyboru");
 		}
 
-		// metoda getFirstSelectedOption() pobiera pierwsza wybrana opcje lub
-		// aktualnie wybrana opcje z listy
-		// select.selectByIndex(1);
-		// WebElement FSO = select.getFirstSelectedOption();
-		// System.out.println(select.getFirstSelectedOption().getText());
+		// metoda getFirstSelectedOption() pobiera pierwsza wybrana opcje lub aktualnie wybrana opcje z listy
+		 select.selectByIndex(1);
+		 WebElement FSO = select.getFirstSelectedOption();
+		 System.out.println(select.getFirstSelectedOption().getText());
 
-		// usuwanie wszystkich zaznaczeñ
-		// select.deselectAll();
+		 // usuwanie wszystkich zaznaczeñ
+		 select.deselectAll();
 
 		// usuwanie po indexie
-		// select.deselectByIndex(3);
+		 select.deselectByIndex(3);
 
 		// usuwanie zaznaczenia po value
-		// select.deselectByValue("ms4");
+		 select.deselectByValue("ms4");
 
 		// usuwanie zaznaczenia po widocznm tekscie
-		// select.deselectByVisibleText("Selection Item 4");
+		 select.deselectByVisibleText("Selection Item 4");
 
 	}
 
