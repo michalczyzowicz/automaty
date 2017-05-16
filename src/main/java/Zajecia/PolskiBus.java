@@ -22,6 +22,9 @@ public class PolskiBus {
 
 	@FindBy(id = "CustomToCity")
 	private WebElement button2;
+	
+	@FindBy (xpath = "//*[@class ='btn btn-lg btn-success onb_btnRoundTR']")
+	private WebElement search;
 
 	public void setPeople(String people) {
 		this.people.sendKeys(people);
@@ -47,4 +50,8 @@ public class PolskiBus {
 		return cityTo;
 
 	}
+	public void search() {
+		search.click();
+	}
+	
 }

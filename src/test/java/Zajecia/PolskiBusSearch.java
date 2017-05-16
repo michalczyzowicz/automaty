@@ -1,5 +1,7 @@
 package Zajecia;
 
+import static org.junit.Assert.*;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -34,11 +36,14 @@ private WebDriver driver;
 		
 		NewCalendar calendar = PageFactory.initElements(driver, NewCalendar.class);
 		driver.findElement(By.id("datePickerOut")).click();
-		calendar.clickNext();
+		assertTrue(calendar.clickNext2());
+		//calendar.clickNext();
 		calendar.clickDay("15");
 		driver.findElement(By.id("datePickerRet")).click();
+		assertFalse(calendar.clickPrev2());
 		calendar.clickDay("25");
-		assertTrue
+		//search.search();
+		
 		
 		
 	}

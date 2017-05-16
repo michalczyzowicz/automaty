@@ -58,4 +58,13 @@ public class NewCalendar {
 		}
 			return false;
 	}
+	
+	public boolean clickPrev2() {
+		if (isPrevClickable()) { 
+			prev.click();
+			return true;
+		}
+		//clickDay ("29");
+		return false;
+	}
 }

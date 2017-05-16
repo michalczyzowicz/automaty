@@ -58,15 +58,15 @@ public class BookingSearchTest {
 
 	
 	  @Test 
-	  public void submitForm() { BookingSearch search =
-	  PageFactory.initElements(driver, BookingSearch.class);
+	  public void submitForm() { 
+	  BookingSearch search = PageFactory.initElements(driver, BookingSearch.class);
 	  search.setTextInSearch("Warszawa"); 
 	  WebDriverWait wait = new WebDriverWait(driver, 15);
 	  wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul/li/b"))); 
 	  List<WebElement> ulLi =  driver.findElements(By.xpath("//ul/li/b"));
 	  ulLi.get(3).click();
+	  
 	  List<WebElement> checkin = driver.findElements(By.cssSelector(".sb-searchbox__row > .js--sb-dates > .sb-dates__grid > .--checkin-field"));
-	  	 
 	  Calendar calen = PageFactory.initElements(driver, Calendar.class);
 	  calen.getDaysWithMonth().get("Czerwiec 2017").get(24).click();
 	  
@@ -75,9 +75,11 @@ public class BookingSearchTest {
 	  Calendar calen2 = PageFactory.initElements(driver, Calendar.class);
 	  calen.getDaysWithMonth().get("Czerwiec 2017").get(29).click();
 	  
-
-	/*
-	 * List<WebElement> calendar =
+	  search.clickSearchButton();
+	  assertTrue(search.visibleChart().isDisplayed());
+	  assertTrue(search.wynikWyszukiwania());
+			  
+	 /* * List<WebElement> calendar =
 	 * driver.findElements(By.className("c2-calendar")); List<WebElement>
 	 * columns = calendar.get(0).findElements(By.tagName("tr"));
 	 * List<WebElement> today = calendar.get(0).findElements(By.xpath(
