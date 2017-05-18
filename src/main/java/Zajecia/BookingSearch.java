@@ -10,8 +10,12 @@ public class BookingSearch {
 	private WebElement search;
 	@FindBy(xpath = "//ul/li/b")
 	private List<WebElement> autocompleteItems;
+	@FindBy (className = "b-booker-type--leisure")
+	private WebElement travelPurpose;
 	@FindBy (className = "sb-searchbox__button")
 	private WebElement searchButton;
+	@FindBy (id = "b_map_tiles")
+	private WebElement map;
 	@FindBy (className = "sr_animate_low_avail_percent")
 	private WebElement chart;
 
@@ -31,6 +35,10 @@ public class BookingSearch {
 		return autocompleteItems;
 	}
 	
+	public void clickTravelpurpose() {
+		travelPurpose.click();
+	}
+	
 	public void clickSearchButton() {
 		searchButton.click();
 	}
@@ -44,6 +52,13 @@ public class BookingSearch {
 			return true;
 		} 
 			return false;
+	}
+	
+	public boolean mapVisible() {
+		if (map.getAttribute("id").contains("b_map_tiles")) {
+			return true;
+		}
+		return false;
 	}
 	
 }

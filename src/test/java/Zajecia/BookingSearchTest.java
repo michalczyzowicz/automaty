@@ -66,6 +66,7 @@ public class BookingSearchTest {
 	  List<WebElement> ulLi =  driver.findElements(By.xpath("//ul/li/b"));
 	  ulLi.get(3).click();
 	  
+	  
 	  List<WebElement> checkin = driver.findElements(By.cssSelector(".sb-searchbox__row > .js--sb-dates > .sb-dates__grid > .--checkin-field"));
 	  Calendar calen = PageFactory.initElements(driver, Calendar.class);
 	  calen.getDaysWithMonth().get("Czerwiec 2017").get(24).click();
@@ -75,7 +76,10 @@ public class BookingSearchTest {
 	  Calendar calen2 = PageFactory.initElements(driver, Calendar.class);
 	  calen.getDaysWithMonth().get("Czerwiec 2017").get(29).click();
 	  
+	  search.clickTravelpurpose();
+	  
 	  search.clickSearchButton();
+	  assertTrue(search.mapVisible());
 	  assertTrue(search.visibleChart().isDisplayed());
 	  assertTrue(search.wynikWyszukiwania());
 			  

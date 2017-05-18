@@ -50,7 +50,7 @@ public class PolskiBus {
 		return cityTo;
 
 	}
-	public void search() {
+	public void clickSearch() {
 		search.click();
 	}
 	

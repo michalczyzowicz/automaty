@@ -21,7 +21,7 @@ private WebDriver driver;
 		driver.get("http://polskibus.com/");
 	}
 	@Test
-	public void search(){
+	public void search() throws InterruptedException{
 		//najpierw musimy wejsc do "ramki" aby mozna bylo wyszukiwac w niej elementy, nastepnie robimy PageFactory
 		driver.switchTo().frame("BEHold");
 		PolskiBus search = PageFactory.initElements(driver, PolskiBus.class);
@@ -42,7 +42,8 @@ private WebDriver driver;
 		driver.findElement(By.id("datePickerRet")).click();
 		assertFalse(calendar.clickPrev2());
 		calendar.clickDay("25");
-		//search.search();
+		Thread.sleep(3000);
+		search.clickSearch();
 		
 		
 		
