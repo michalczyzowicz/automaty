@@ -1,4 +1,4 @@
-package Zajecia;
+/*package Zajecia;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -28,3 +28,4 @@ public class DriverFactory {
 
 
 //jak chcemy wykorzystac to: driver = DriverFactory.getDriver("firefox");
+*/
