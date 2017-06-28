@@ -40,7 +40,7 @@ public class TestResultToExcel {
 			}
 		}
 		try {
-			FileOutputStream out = new FileOutputStream(new File("C:\\Michal\\JAVA\\result.xls"));
+			FileOutputStream out = new FileOutputStream(new File("D:\\Testowanie\\result.xls"));
 			workbook.write(out);
 			out.close();
 
